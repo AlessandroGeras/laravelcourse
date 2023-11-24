@@ -1,6 +1,13 @@
 # Laravel Commands
 <br>
 
+## Check Environment
+Verificar se o servidor está em Desenvolvimento ou em Produção
+    
+    php artisan about
+<br>
+
+
 ## Environment Variable
 Passar uma variável de ambiente do arquivo .env para a aplicação
 
