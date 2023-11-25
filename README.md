@@ -53,3 +53,21 @@ Deixar o servidor em modo de manutenção
 
     php artisan up
 <br>
+
+
+## Routes
+Retonar apenas uma view
+
+    Route::view('/', 'index');
+<br>
+
+Agrupar controladores
+
+    Route::get("/user/register", [UserController::class, "registerView"])->name("register.user.view");
+    Route::post("/user/register", [UserController::class, "store"])->name("register.user");
+<br>
+
+    Route::controller(UserController::class)->group(function () {
+    Route::get('/user/register', 'registerView')->name('register.user.view');
+    Route::post('/user/register', 'store')->name('register.user');
+});
