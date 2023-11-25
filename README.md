@@ -36,3 +36,16 @@ Para projetos em produção
 
     php artisan config:clear
 <br>
+
+
+## Maintenance Mode
+Deixar o servidor em modo de manutenção
+
+    php artisan down
+<br>
+
+    view de erro: resources/views/errors/503.blade.php
+<br>
+
+    php artisan up
+<br>
