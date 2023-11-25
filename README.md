@@ -65,9 +65,10 @@ Agrupar controladores
 
     Route::get("/user/register", [UserController::class, "registerView"])->name("register.user.view");
     Route::post("/user/register", [UserController::class, "store"])->name("register.user");
-<br>
+<br>    
 
-    Route::controller(UserController::class)->group(function () {
-    Route::get('/user/register', 'registerView')->name('register.user.view');
-    Route::post('/user/register', 'store')->name('register.user');
+    Route::prefix('user')->group(function () {
+    Route::get('/register', [UserController::class, 'registerView'])->name('register.user.view');
+    Route::post('/register', [UserController::class, 'store'])->name('register.user');
+});
 });
