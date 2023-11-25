@@ -32,9 +32,13 @@ Passar uma variável de ambiente do arquivo .env para a aplicação
 Para projetos em produção
 
     php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
 <br>
 
     php artisan config:clear
+    php artisan route:clear
+    php artisan view:clear
 <br>
 
 
