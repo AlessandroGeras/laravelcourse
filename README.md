@@ -70,5 +70,18 @@ Agrupar controladores
     Route::prefix('user')->group(function () {
     Route::get('/register', [UserController::class, 'registerView'])->name('register.user.view');
     Route::post('/register', [UserController::class, 'store'])->name('register.user');
-});
-});
+    });
+<br>
+
+
+## Soft Delete vs Destroy
+Soft Delete não destroi o registro, apenas faz uma marcação para não torná-lo disponível
+
+    $user = User::find($id);
+    $user->delete();
+<br>
+
+O método destroy é chamado diretamente na classe do modelo e exclui o registro pelo ID.
+
+    User::destroy($id);
+<br>   
